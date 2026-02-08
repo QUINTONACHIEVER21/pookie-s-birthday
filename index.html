@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>A Surprise for Tsholofetso 🎁</title>
+  <title>A Note for Tsholofetso 💌</title>
+
+  <!-- Handwritten font -->
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
@@ -22,7 +26,7 @@
       transition: opacity 1s ease;
     }
 
-    /* Intro */
+    /* Intro screen */
     #intro {
       color: white;
       text-align: center;
@@ -30,9 +34,9 @@
     }
 
     .loader {
-      font-size: 2.5em;
+      font-size: 2.8em;
       margin-top: 20px;
-      animation: pulse 1.2s infinite;
+      animation: pulse 1.3s infinite;
     }
 
     @keyframes pulse {
@@ -41,68 +45,87 @@
       100% { opacity: 0.3; }
     }
 
-    /* Ballerina */
+    /* Ballerina (bigger + slower) */
     #ballerina {
       position: absolute;
-      bottom: 18%;
-      font-size: 4em;
-      left: -30%;
+      bottom: 15%;
+      font-size: 6em;          /* BIGGER */
+      left: -40%;
       opacity: 0;
-      animation: danceAcross 4s ease-in-out forwards;
+      animation: danceAcross 7s ease-in-out forwards; /* SLOWER */
       animation-delay: 3s;
     }
 
     @keyframes danceAcross {
       0% {
-        left: -30%;
+        left: -40%;
         opacity: 1;
         transform: rotate(0deg);
       }
       50% {
-        transform: rotate(20deg);
+        transform: rotate(25deg);
       }
       100% {
         left: 120%;
         opacity: 1;
-        transform: rotate(-15deg);
+        transform: rotate(-20deg);
       }
     }
 
-    /* Card */
+    /* Card container */
     #card {
       opacity: 0;
       pointer-events: none;
     }
 
     .card-box {
-      background: white;
-      padding: 40px;
-      border-radius: 22px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      background: #fffdf7;
+      padding: 0;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
       max-width: 520px;
+      width: 90%;
+      max-height: 75vh;
+      overflow: hidden;
+    }
+
+    /* Notebook paper */
+    .paper {
+      font-family: 'Patrick Hand', cursive;
+      font-size: 1.35em;
+      padding: 35px 30px;
+      line-height: 1.8;
+      background:
+        repeating-linear-gradient(
+          to bottom,
+          #fffdf7,
+          #fffdf7 32px,
+          #cfd8dc 33px
+        );
+      color: #333;
+      max-height: 75vh;
+      overflow-y: auto;
+    }
+
+    .paper h1 {
+      font-size: 2em;
+      margin-top: 0;
+      color: #c8102e;
       text-align: center;
     }
 
-    h1 {
-      font-size: 2.4em;
-      margin-top: 0;
-      color: #c8102e;
+    .signature {
+      margin-top: 30px;
+      font-size: 1.2em;
     }
 
-    p {
-      font-size: 1.15em;
-      line-height: 1.5;
+    /* Scrollbar (optional polish) */
+    .paper::-webkit-scrollbar {
+      width: 6px;
     }
-
-    .emoji {
-      font-size: 3em;
-      margin-top: 15px;
-    }
-
-    .ynwa {
-      margin-top: 20px;
-      font-weight: bold;
-      color: #c8102e;
+    .paper::-webkit-scrollbar-thumb {
+      background: #c8102e;
+      border-radius: 10px;
     }
   </style>
 </head>
@@ -110,55 +133,4 @@
 
   <!-- Intro -->
   <div class="screen" id="intro">
-    <div>📱 Scan completed</div>
-    <div>Loading something special…</div>
-    <div class="loader">🎁</div>
-  </div>
-
-  <!-- Ballerina -->
-  <div id="ballerina">🩰💃🏽</div>
-
-  <!-- Birthday Card -->
-  <div class="screen" id="card">
-    <div class="card-box">
-      <h1>Happy 23rd Birthday, Tsholofetso 🎂</h1>
-
-      <p>
-        I thought about getting you something normal…
-        then I remembered you support Liverpool 😌🔴
-      </p>
-
-      <p>
-        23 looks really good on you by the way —  
-        confident, kind, and honestly a bit unfair on the rest of us.
-      </p>
-
-      <p>
-        Just like your team, you never walk alone —  
-        especially not today.
-      </p>
-
-      <div class="ynwa">
-        You’ll Never Walk Alone ❤️  
-        (especially not with me cheering you on)
-      </div>
-
-      <div class="emoji">✨💖🥳</div>
-    </div>
-  </div>
-
-  <script>
-    // Hide intro
-    setTimeout(() => {
-      document.getElementById('intro').style.opacity = 0;
-    }, 3000);
-
-    // Reveal card after ballerina passes
-    setTimeout(() => {
-      document.getElementById('card').style.opacity = 1;
-      document.getElementById('card').style.pointerEvents = 'auto';
-    }, 7000);
-  </script>
-
-</body>
-</html>
+    <div>📱 Scan complete
