@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Loading Surprise 🎁</title>
+  <title>A Little Surprise 🎁</title>
   <style>
     body {
       margin: 0;
@@ -14,10 +14,7 @@
 
     .screen {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      inset: 0;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -25,16 +22,16 @@
       transition: opacity 1s ease;
     }
 
-    /* Intro Screen */
+    /* Intro */
     #intro {
       color: white;
-      font-size: 1.5em;
       text-align: center;
+      font-size: 1.5em;
     }
 
     .loader {
+      font-size: 2.5em;
       margin-top: 20px;
-      font-size: 2em;
       animation: pulse 1.2s infinite;
     }
 
@@ -44,7 +41,34 @@
       100% { opacity: 0.3; }
     }
 
-    /* Birthday Card */
+    /* Ballerina */
+    #ballerina {
+      position: absolute;
+      bottom: 20%;
+      font-size: 4em;
+      left: -20%;
+      opacity: 0;
+      animation: danceAcross 4s ease-in-out forwards;
+      animation-delay: 3s;
+    }
+
+    @keyframes danceAcross {
+      0% {
+        left: -20%;
+        opacity: 1;
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(15deg);
+      }
+      100% {
+        left: 110%;
+        opacity: 1;
+        transform: rotate(-10deg);
+      }
+    }
+
+    /* Card */
     #card {
       opacity: 0;
       pointer-events: none;
@@ -60,8 +84,8 @@
     }
 
     h1 {
+      font-size: 2.4em;
       margin-top: 0;
-      font-size: 2.5em;
     }
 
     p {
@@ -70,41 +94,49 @@
 
     .emoji {
       font-size: 3em;
-      margin-top: 20px;
+      margin-top: 15px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Intro Screen -->
+  <!-- Intro -->
   <div class="screen" id="intro">
     <div>📱 Scan completed</div>
     <div>Loading surprise…</div>
     <div class="loader">🎁</div>
   </div>
 
-  <!-- Birthday Message -->
+  <!-- Ballerina -->
+  <div id="ballerina">🩰💃🏽</div>
+
+  <!-- Birthday Card -->
   <div class="screen" id="card">
     <div class="card-box">
       <h1>Happy Birthday 🎂</h1>
-      <p>Wishing you a day filled with love, laughter, and cake.</p>
-      <p>You deserve all the good things today and always ✨</p>
-      <div class="emoji">🎉🥳🎁</div>
+      <p>
+        I was going to get you something normal…  
+        but then I remembered you’re anything but normal 😉
+      </p>
+      <p>
+        I hope today makes you smile as much as you make me smile.
+      </p>
+      <div class="emoji">💖✨🥳</div>
     </div>
   </div>
 
   <script>
+    // Hide intro after 3s
     setTimeout(() => {
       document.getElementById('intro').style.opacity = 0;
+    }, 3000);
+
+    // Show card after ballerina finishes
+    setTimeout(() => {
       document.getElementById('card').style.opacity = 1;
       document.getElementById('card').style.pointerEvents = 'auto';
-    }, 3000);
+    }, 7000);
   </script>
 
-</body>
-</html>
-
-    <div class="emoji">🎉🎁🥳</div>
-  </div>
 </body>
 </html>
