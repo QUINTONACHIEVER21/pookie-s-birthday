@@ -133,4 +133,74 @@
 
   <!-- Intro -->
   <div class="screen" id="intro">
-    <div>📱 Scan complete
+    <div>📱 Scan completed</div>
+    <div>Loading something personal…</div>
+    <div class="loader">🎁</div>
+  </div>
+
+  <!-- Ballerina -->
+  <div id="ballerina">🩰💃🏽</div>
+
+  <!-- Message Card -->
+  <div class="screen" id="card">
+    <div class="card-box">
+      <div class="paper">
+
+        <h1>Happy 23rd Birthday, Tsholofetso 🎂</h1>
+
+        <p>
+          I hope you’re smiling while reading this, because I definitely was
+          smiling while writing it.
+        </p>
+
+        <p>
+          I wanted to do something a little different for your birthday —
+          something thoughtful, a bit funny, and very you.
+          So naturally… a ballerina floated past your screen 😌
+        </p>
+
+        <p>
+          You’re 23 now, and honestly, you wear it so well.
+          Strong, graceful, kind, and quietly powerful —
+          a bit like a certain football club you support.
+        </p>
+
+        <p>
+          Just like Liverpool on a big European night,
+          you always show up with heart.
+          And no matter what life throws your way,
+          you never walk alone.
+        </p>
+
+        <p>
+          I hope this year brings you laughter,
+          growth, surprises,
+          and moments that remind you just how special you are.
+        </p>
+
+        <p>
+          You’ll Never Walk Alone ❤️  
+          Not today. Not this year. Not ever.
+        </p>
+
+        <div class="signature">
+          — From me 💌
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById('intro').style.opacity = 0;
+    }, 3000);
+
+    setTimeout(() => {
+      document.getElementById('card').style.opacity = 1;
+      document.getElementById('card').style.pointerEvents = 'auto';
+    }, 10000); // longer because ballerina is slower
+  </script>
+
+</body>
+</html>
