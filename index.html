@@ -133,6 +133,11 @@
     }
   </style>
 </head>
+  
+  <audio id="ynwa" loop>
+  <source src="ynwa.mp3" type="audio/mpeg">
+</audio>
+
 <body>
 
   <!-- Intro -->
@@ -204,6 +209,9 @@
       document.getElementById('card').style.opacity = 1;
       document.getElementById('card').style.pointerEvents = 'auto';
     }, 10000); // longer because ballerina is slower
+    const music = document.getElementById('ynwa');
+music.volume = 0.25;
+music.play();
   </script>
 
 </body>
