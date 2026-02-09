@@ -78,34 +78,33 @@
       pointer-events: none;
     }
 
-    .card-box {
-      background: #fffdf7;
-      padding: 0;
-      border-radius: 20px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-      max-width: 520px;
-      width: 90%;
-      max-height: 75vh;
-      overflow: hidden;
-    }
+.card-box {
+  background: #fffdf7;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  max-width: 520px;
+  width: 90%;
+  height: 75vh;        /* Fixed notebook height */
+  overflow: hidden;   /* Hide overflow */
+}
 
-    /* Notebook paper */
-    .paper {
-      font-family: 'Patrick Hand', cursive;
-      font-size: 1.35em;
-      padding: 35px 30px;
-      line-height: 1.8;
-      background:
-        repeating-linear-gradient(
-          to bottom,
-          #fffdf7,
-          #fffdf7 32px,
-          #cfd8dc 33px
-        );
-      color: #333;
-      max-height: 75vh;
-      overflow-y: auto;
-    }
+.paper {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.5em;
+  padding: 40px 35px;
+  line-height: 1.9;
+
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      #fffdf7,
+      #fffdf7 36px,
+      #cfd8dc 37px
+    );
+
+  height: 100%;        /* Fill notebook */
+  overflow-y: auto;   /* THIS enables scrolling */
+}
 
     .paper h1 {
       font-size: 2em;
